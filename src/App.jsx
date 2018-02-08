@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 export default class App extends Component{
   render(){
     return(
-      <Header />
+      <h1> hi </h1>
       )
   }
 }
