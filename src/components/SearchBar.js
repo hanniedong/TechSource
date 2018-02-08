@@ -5,7 +5,7 @@ export default class SearchBar extends Component {
   constructor(props){
     super(props)
     this.state = {
-      address: ''
+      city: ''
     }
   }
 
@@ -28,7 +28,7 @@ export default class SearchBar extends Component {
       <div> 
         <form onSubmit = {this.handleSubmit.bind(this)}>
           <input
-            name = "address"
+            name = "city"
             type = "search"
             placeholder = "Search by City"
             onChange = {this.handleInputChange.bind(this)}
