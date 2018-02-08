@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import SearchBar from './components/SearchBar';
 
-const App = () => {
-  return <div> Hi! </div>;
+export default class App extends Component {
+  render(){
+  return (
+    <div>
+      <SearchBar /> 
+   </div>
+  )
+}
 }
 
 ReactDOM.render(

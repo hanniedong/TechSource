@@ -6,3 +6,7 @@ npm-debug.log
 # IntelliJ
 *.iml
 /.idea
+
+#token 
+/src/Key.js
+.env
