@@ -4,13 +4,6 @@ import {
   PERSONAL_TOKEN, 
 } from '../Key';
 
-const updateEvents = (dispatch, events) => {
-  dispatch({
-    type: 'UPDATE_EVENTS',
-    payload: events
-  });
-};
-
 export const updateSearch = (text) => {
   console.log(text)
   return {
@@ -27,13 +20,11 @@ export const fetchEvents = (city) => {
       token: TOKEN,
       categories: '102',
       'location.address': city,
-      'location.within': '5mi'
+      'location.within': '20mi'
     }
   })
   .then(response => {
-    console.log(response)
-  .catch(function (error) {
-    console.log(error);
+    console.log(response);
   });
-  };
-};
+}
+}

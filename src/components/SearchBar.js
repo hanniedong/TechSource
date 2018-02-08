@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {updateSearch, fetchEvents} from '../actions';
 
-export default class SearchBar extends Component {
-  
-  constructor(props){
-    super(props)
-    this.state = {
-      city: ''
-    }
-  }
+export class SearchBar extends Component {
 
   handleSubmit(event){
+    const { fetchEvents, city } = this.props;
     event.preventDefault();
     console.log(this.state.address)
+    fetchEvents(city);
   }
 
   handleInputChange(event){
     const value = event.target.value;
-    const name = event.target.name;
-
-    this.setState({
-      [name]: value
-    });
+    const { updateSearch } = this.props;
   }
 
   render(){
@@ -39,3 +32,15 @@ export default class SearchBar extends Component {
       )
   }
 }
+
+function mapStateToProps(state){
+  const { city } = state.data
+    return { city }
+}
+
+export default connect(
+  mapStateToProps,{
+    updateSearch,
+    fetchEvents
+  }
+)(SearchBar)
