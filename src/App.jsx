@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from './components/Header';
 import { updateSearch, fetchEvents } from './actions';
+import EventList from './components/Eventlist';
 
 export class App extends Component{
   state = {
@@ -17,11 +18,11 @@ export class App extends Component{
   }
 
   render(){
-    let{events} = this.props.data;
-
+    let { events } = this.props.data;
     return(
       <div className = 'container'>
         <Header />
+        <EventList events={events}/>
       </div>
 
     )
