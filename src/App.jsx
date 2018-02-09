@@ -18,6 +18,7 @@ export class App extends Component{
 
   render(){
     let{events} = this.props.data;
+
     return(
       <div className = 'container'>
         <Header />

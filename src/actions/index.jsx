@@ -4,6 +4,13 @@ import {
    PERSONAL_TOKEN
 } from '../key';
 
+const updateEvents = (dispatch, events) =>{
+  dispatch({
+    type: 'UPDATE_EVENTS',
+    payload: events
+  });
+};
+
 export const updateSearch = (text) => {
   console.log(text)
   return {
@@ -25,7 +32,14 @@ export const fetchEvents = (city) => {
     }
   })
   .then(response => {
-    console.log(response);
+    eventArray.push(response.data);
+  })
+  .then(() => {
+    setTimeout(()=>updateEvents(dispatch,eventArray),0)
+  })
+  .catch(function (error) {
+    console.log("error")
+    console.log(error);
   });
-}
-}
+  };
+};
