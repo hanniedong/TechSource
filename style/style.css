@@ -1,3 +1,8 @@
+.jumbotron{
+  padding: 200px;
+  background-color: #008080
+}
+
 .container{
   margin: 20px auto;
   text-align: center;
