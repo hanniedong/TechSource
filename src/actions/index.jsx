@@ -11,16 +11,16 @@ const updateEvents = (dispatch, events) =>{
   });
 };
 
-export const updateSearch = (text) => {
-  console.log(text)
+export const updateCity = (text) => {
   return {
-    type: 'UPDATE_SEARCH',
+    type: 'UPDATE_CITY',
     payload: text,
   }
 }
 
 export const fetchEvents = (city) => {
   var eventArray = [];
+  console.log(city)
   return (dispatch) => {
   axios.get('https://www.eventbriteapi.com/v3/events/search/', {
     params: {

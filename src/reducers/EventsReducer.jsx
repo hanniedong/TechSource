@@ -10,7 +10,7 @@ const eventsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         events:action.payload
       }
-    case 'UPDATE_SEARCH':
+    case 'UPDATE_CITY':
       return {
         ...state,
         city:action.payload
