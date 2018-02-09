@@ -31,7 +31,10 @@ export const fetchEvents = (city) => {
     }
   })
   .then(response => {
-    eventArray.push(response.data);
+    const {events} = response.data
+    events.forEach(event =>{
+      eventArray.push(event);
+    })
   })
   .then(() => {
     setTimeout(()=>updateEvents(dispatch,eventArray),0)
