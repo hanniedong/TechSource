@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {updateSearch, fetchEvents} from '../actions';
+import {updateCity, fetchEvents} from '../actions';
 
 export class SearchBar extends Component {
 
@@ -12,7 +12,8 @@ export class SearchBar extends Component {
 
   handleInputChange(event){
     const value = event.target.value;
-    const { updateSearch } = this.props;
+    const { updateCity } = this.props;
+    updateCity(value)
   }
 
   render(){
@@ -39,7 +40,7 @@ function mapStateToProps(state){
 
 export default connect(
   mapStateToProps,{
-    updateSearch,
+    updateCity,
     fetchEvents
   }
 )(SearchBar)

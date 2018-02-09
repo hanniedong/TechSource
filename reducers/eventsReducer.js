@@ -10,6 +10,10 @@ const eventsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         events:action.payload
       }
+    case 'UPDATE_CITY':
+      return {
+        ...state,
+        city:action.payload
       }
     default:
       return state
