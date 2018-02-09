@@ -1,3 +1,8 @@
+.jumbotron{
+  padding: 200px;
+  background-color: #008080
+}
+
 .container{
   margin: 20px auto;
   text-align: center;
@@ -7,6 +12,40 @@
   margin: 30px;
 }
 
-.event-detail-container{
-  margin-top: 70px;
+.event-detail_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.event-detail_image {
+  height: 70%;
+  width: 95%;
+  margin: 10px 5px;
+}
+
+.event-detail__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.event-detail_detail {
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  width: 90%;
+  height: 12%;
+  margin: 0 auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-detail_card {
+  width: 90%;
+  height: 450px;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
 }

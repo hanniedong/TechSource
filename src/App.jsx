@@ -22,7 +22,9 @@ export class App extends Component{
     let { events } = this.props.data;
     return(
       <div className = 'container'>
-        <Header />
+        <div className = 'jumbotron'>
+          <Header />
+        </div>
         <EventList events={events}/>
       </div>
 
