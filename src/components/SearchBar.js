@@ -7,7 +7,6 @@ export class SearchBar extends Component {
   handleSubmit(event){
     const { fetchEvents, city } = this.props;
     event.preventDefault();
-    console.log(this.state.address)
     fetchEvents(city);
   }
 

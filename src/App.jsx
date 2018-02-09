@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SearchBar from '.components/SearchBar';
+import SearchBar from './components/SearchBar';
 import { updateSearch, fetchEvents } from './actions';
 
-export default class App extends Component{
+export class App extends Component{
   state = {
     eventsLoaded: false
   }
@@ -23,7 +23,7 @@ export default class App extends Component{
 
     )
   }
-
+}
   function mapStateToProps(state){
     const { data } = state;
       return { data };

@@ -8,5 +8,4 @@ npm-debug.log
 /.idea
 
 #token 
-/src/Key.js
 .env

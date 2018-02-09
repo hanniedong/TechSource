@@ -6,11 +6,9 @@ import App from './App';
 
 const store = configureStore();
 
-
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.querySelector(".container")
 );

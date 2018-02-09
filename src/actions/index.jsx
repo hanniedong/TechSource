@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {
-  TOKEN, 
-  PERSONAL_TOKEN, 
-} from '../Key';
+   TOKEN, 
+   PERSONAL_TOKEN
+} from '../key';
 
 export const updateSearch = (text) => {
   console.log(text)
@@ -13,6 +13,7 @@ export const updateSearch = (text) => {
 }
 
 export const fetchEvents = (city) => {
+  console.log(TOKEN)
   var eventArray = [];
   return (dispatch) => {
   axios.get('https://www.eventbriteapi.com/v3/events/search/', {
@@ -20,7 +21,7 @@ export const fetchEvents = (city) => {
       token: TOKEN,
       categories: '102',
       'location.address': city,
-      'location.within': '20mi'
+      'location.within': '5mi'
     }
   })
   .then(response => {
