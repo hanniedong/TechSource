@@ -21,7 +21,7 @@ export const fetchEvents = (city) => {
       token: TOKEN,
       categories: '102',
       'location.address': city,
-      'location.within': '5mi'
+      'location.within': '15mi'
     }
   })
   .then(response => {

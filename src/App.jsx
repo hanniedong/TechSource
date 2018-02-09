@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SearchBar from './components/SearchBar';
+import Header from './components/Header';
 import { updateSearch, fetchEvents } from './actions';
 
 export class App extends Component{
@@ -19,7 +19,9 @@ export class App extends Component{
   render(){
     let{events} = this.props.data;
     return(
-      <SearchBar />
+      <div className = 'container'>
+        <Header />
+      </div>
 
     )
   }
