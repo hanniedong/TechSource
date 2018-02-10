@@ -43,9 +43,48 @@
 }
 
 .event-detail_card {
-  width: 90%;
+  width: 60%;
   height: 450px;
   -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
   -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
   box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container-flip .flipper {
+  transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.event-detail_card_front, .event-detail_card_back  {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.event-detail_card_front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.event-detail_card_back  {
+  transform: rotateY(180deg);
+}
+
+.event-detail_card_back  {
+  opacity: none;
 }
