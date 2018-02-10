@@ -22,6 +22,9 @@ export default class EventList extends Component{
             url={event.url}
             latitude={event.latitude}
             longitude={event.longitude}
+            start = {event.start.local}
+            
+            
             date={event.start.local}
           />
         )
