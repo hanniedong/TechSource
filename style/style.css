@@ -1,6 +1,7 @@
 .jumbotron{
-  padding: 200px;
+  padding: 100px;
   background-color: #008080
+  margin-bottom: 300px;
 }
 
 .container{
@@ -22,11 +23,6 @@
   margin-bottom: 20px;
 }
 
-
-.event-detail_container:first-of-type {
-  margin-top: 160px;
-}
-
 .event-detail_image {
   height: 100%;
   width: 95%;
@@ -41,9 +37,10 @@
 .event-detail_detail {
   background-color: #f8f8f8;
   border: 1px solid #f0f0f0;
-  width: 90%;
+  width: 95%;
   height: 12%;
   margin: 0 auto;
+  margin-bottom: 20px;
   display: block;
   align-items: center;
   justify-content: center;
@@ -51,7 +48,7 @@
 
 .event-detail_card {
   width: 55%;
-  height: 450px;
+  height: 55%;
   -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
   -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
   box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
@@ -92,9 +89,14 @@
 .event-detail_card_back  {
   backface-visibility: hidden;
   position: absolute;
-  margin: 20px;
   top: 0;
   left: 0;
+  margin-top: 20px;
+  padding: 20px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* front pane, placed above back */

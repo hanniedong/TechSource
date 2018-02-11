@@ -14,9 +14,14 @@ export default class EventDetail extends Component{
   
 
   render(){
-    const { image, name, url, latitude, longitude, date, start} = this.props
+    const { image, name, url, latitude, longitude, date, start, end } = this.props
 
     const displayDate = new Date(date).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' });
+
+    const startDisplayTime = new Date(start).toLocaleTimeString('en-US');
+
+    const endDisplayTime = new Date(end).toLocaleTimeString('en-US');
+
     return(
       <div className = {`event-detail_container flip-container ${this.state.flipped ? 'flip-container-flip' : ''}`}>
         <div className = 'event-detail_card flipper'>
@@ -26,12 +31,13 @@ export default class EventDetail extends Component{
             <div className = 'event-detail_detail'>
               <a href = {url}><h6> {name} </h6></a>
               <p> {displayDate} </p>
-              <p onClick={this.handleClick.bind(this)}> Click </p>
+              <p onClick={this.handleClick.bind(this)}> Details </p>
             </div>
           </div>
           <div className="event-detail_card_back">
             <div className="event-detail_detail">
-              <p >{start}</p> 
+              <p >Start Time: {startDisplayTime}</p> 
+              <p >End Time: {endDisplayTime}</p> 
               <p onClick={this.handleClick.bind(this)}>Back</p>
             </div>
           </div>
