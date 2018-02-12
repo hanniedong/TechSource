@@ -29,9 +29,16 @@
   margin: 20px 5px;
 }
 
-.event-detail__link {
+.event-detail_link {
   color: #000;
   text-decoration: none;
+}
+
+.event-detail_detail:hover {
+  background-color: rgba(236, 240, 241,1.0);
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
 }
 
 .event-detail_detail {
