@@ -22,7 +22,7 @@ export default class Map extends Component {
     const {latitude, longitude} = this.props;
     const place = [<PlaceMarker lat={latitude} lng={longitude} />]
     return(
-      <div style={{width: `300px`, height: `200px`}}>
+      <div style={{ height: `200px`}}>
         <ViewMap
           center={{
             lat: Number(latitude),
@@ -31,10 +31,10 @@ export default class Map extends Component {
           place = {place}
           zoom={this.zoom}
           containerElement={
-            <div style={{ height: `100%` }} />
+            <div style={{ height: `100%`, width: `100%` }} />
           }
           mapElement={
-            <div style={{ height: `100%` }} />
+            <div style={{ height: `100%`, width: `100%`  }} />
           }
         />
       </div>

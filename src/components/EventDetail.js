@@ -34,11 +34,12 @@ export default class EventDetail extends Component{
             </div>
           </div>
           <div className="event-detail_card_back">
+            <Map 
+              latitude = {latitude}
+              longitude = {longitude} 
+            />
             <div className="event-detail_detail">
-              <Map 
-                latitude = {latitude}
-                longitude = {longitude} 
-              />
+
               <p> Address: {address.address_1} {address.region}, {address.postal_code}</p>
               <p >Start Time: {startDisplayTime}</p> 
               <p >End Time: {endDisplayTime}</p> 
