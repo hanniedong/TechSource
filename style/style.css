@@ -1,19 +1,23 @@
 
 .website-container{
   width:100%;
-  margin: 0 auto;
+  margin: 0px auto;
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #07889B
+  background-color: #F4F4F4
 }
 
+.header{
+  background-color: #373737;
+  padding: 40px;
+}
 
 .header_font{
   margin: 0;
   font-size: 80px;
-  font-family: 'Palatino', sans-serif;
-  color: #A9A9A9;
+  font-family: 'Anton', sans-serif;
+  color: #FFFFFF;
   text-shadow: 0.5px 0.5px darkgrey;
   text-align: center;
 }
