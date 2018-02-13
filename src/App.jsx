@@ -20,10 +20,8 @@ export class App extends Component{
   render(){
     let { events } = this.props.data;
     return(
-      <div className = 'container'>
-        <div className = 'jumbotron'>
-          <Header />
-        </div>
+      <div className = 'website-container'>
+        <Header />
         {this.state.eventsLoaded ? <EventList events={events} /> : null}
       </div>
 
