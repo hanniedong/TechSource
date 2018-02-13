@@ -36,6 +36,7 @@ export default class EventDetail extends Component{
           </div>
           <div className="event-detail_card_back">
             <Map 
+
               latitude = {latitude}
               longitude = {longitude} 
             />
