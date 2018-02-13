@@ -1,0 +1,156 @@
+
+.website-container{
+  width:100%;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #F4F4F4
+}
+
+.header{
+  background-color: #373737;
+  padding: 40px;
+}
+
+.image{
+  margin:20px;
+}
+
+.form-control {
+  margin: 0 auto;
+  max-width: 400px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.btn{
+  display: inline-block;
+}
+
+
+.event-detail_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.event-detail_image {
+  height: 100%;
+  width: 95%;
+  margin: 20px 5px;
+}
+
+.event-detail_link {
+  padding: 3px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 5%;
+  background-color: #8A6C61;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+}
+
+.event-detail_link_font{
+  color: #FFFFFF;
+  font-weight: 300;
+  size: 15px;
+}
+a:link {
+  color: #4D4D4D;
+  text-decoration: none;
+}
+
+.event-detail_link:hover {
+  padding: 5px;
+  background-color: #FDD9A9;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+}
+
+.event-detail_detail {
+  background-color: #F4F4F4;
+  border: 1px solid #f0f0f0;
+  width: 95%;
+  height: 5%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding:5px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 0px rgba(171,171,171,0.46);
+}
+
+.event-detail_card {
+  width: 55%;
+  height: 55%;
+  -webkit-box-shadow: 3px 4px 14px 3px rgba(171,171,171,0.46);
+  -moz-box-shadow: 3px 4px 14px 3px rgba(171,171,171,0.46);
+  box-shadow: 3px 4px 14px 3px rgba(171,171,171,0.46);
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container-flip .flipper {
+  transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.event-detail_card_front {
+  background-color: #FFFFFF;
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.event-detail_card_back  {
+  background-color: #FFFFFF;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  padding: 20px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* front pane, placed above back */
+.event-detail_card_front {
+/*  z-index: 2;*/
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.event-detail_card_back  {
+  transform: rotateY(180deg);
+}
+
+.event-detail_card_back  {
+  opacity: none;
+}
