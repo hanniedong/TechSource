@@ -31,11 +31,19 @@ export const fetchEvents = (city) => {
     }
   })
   .then(response => {
-    const {events} = response.data
-    events.forEach(event =>{
-      eventArray.push(event);
-    })
-  })
+    const {events} = response.data;
+    events.forEach(event => {
+      let {venue_id} = event;
+      axios.get(`https://www.eventbriteapi.com/v3/venues/${venue_id}/`, {
+        params: {
+          token: PERSONAL_TOKEN
+        },
+      })
+      .then(response => {
+        event.latitude = response.data.latitude;
+        event.longitude = response.data.longitude;
+        eventArray.push(event)
+      })
   .then(() => {
     setTimeout(()=>updateEvents(dispatch,eventArray),0)
   })
