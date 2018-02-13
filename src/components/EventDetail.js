@@ -14,9 +14,8 @@ export default class EventDetail extends Component{
   
 
   render(){
-    const { address, image, name, url, location, date, start, end, latitude, longitude } = this.props
+    const { id, address, image, name, url, location, date, start, end, latitude, longitude } = this.props
     const displayDate = new Date(date).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' });
-
     const startDisplayTime = new Date(start).toLocaleTimeString('en-US');
 
     const endDisplayTime = new Date(end).toLocaleTimeString('en-US');
@@ -41,16 +40,18 @@ export default class EventDetail extends Component{
               latitude = {latitude}
               longitude = {longitude} 
             />
+            <br></br>
             <div className="event-detail_detail">
-
               <p> Address: {address.address_1} {address.region}, {address.postal_code}</p>
-              <p >Start Time: {startDisplayTime}</p> 
-              <p >End Time: {endDisplayTime}</p> 
-              <p onClick={this.handleClick.bind(this)}>Back</p>
+              <p>Start Time: {startDisplayTime}</p> 
+              <p>End Time: {endDisplayTime}</p> 
             </div>
-          </div>
+             <div className = 'event-detail_link'>
+              <p className = 'event-detail_link_font' onClick={this.handleClick.bind(this)}>Back</p>
+            </div>
         </div>
       </div>
+    </div>
     )
   }
 }
