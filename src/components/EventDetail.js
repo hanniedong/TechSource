@@ -28,9 +28,11 @@ export default class EventDetail extends Component{
             <img className = 'event-detail_image' src={image} alt=""/>
             <br></br>
             <div className = 'event-detail_detail'>
-              <a href = {url}><h6> {name} </h6></a>
+              <a className = 'event-detail_font' href = {url}><h6> {name} </h6></a>
               <p> {displayDate} </p>
-              <p onClick={this.handleClick.bind(this)}> Details </p>
+            </div>
+            <div className = 'event-detail_link'>
+              <p className = 'event-detail_link_font' onClick={this.handleClick.bind(this)}> Details </p>
             </div>
           </div>
           <div className="event-detail_card_back">
