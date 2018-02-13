@@ -11,23 +11,19 @@ export default class Map extends Component {
   constructor(props) {
     super(props)
  
-    this.zoom = 7
+    this.zoom = 15
  
-    this.state = {
-      lat: 50.0515918,
-      lng: 19.9357531
-    };
   }
  
   render() {
-    const {lat, lng} = this.state;
- 
+    const {latitude, longitude} = this.props;
+    console.log(this.props)
     return(
       <div style={{width: `300px`, height: `200px`}}>
         <ViewMap
           center={{
-            lat: lat,
-            lng: lng
+            lat: Number(this.props.latitude),
+            lng: Number(this.props.longitude)
           }}
           zoom={this.zoom}
           containerElement={

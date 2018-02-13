@@ -44,11 +44,16 @@ export const fetchEvents = (city) => {
         event.longitude = response.data.longitude;
         eventArray.push(event)
       })
-  .then(() => {
-    setTimeout(()=>updateEvents(dispatch,eventArray),0)
+      .then(() => {
+        setTimeout(() => updateEvents(dispatch, eventArray),0)
+      })
+      .catch(function (error) {
+        console.log("error")
+        console.log(error);
+      });
+    })   
   })
   .catch(function (error) {
-    console.log("error")
     console.log(error);
   });
   };
