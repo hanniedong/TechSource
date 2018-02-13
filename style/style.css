@@ -64,6 +64,11 @@
   font-weight: 300;
   size: 15px;
 }
+
+p{
+  padding: 0;
+  margin-top: -20px;
+}
 a:link {
   color: #4D4D4D;
   text-decoration: none;
@@ -118,7 +123,6 @@ a:link {
 
 /* hide back of pane during swap */
 .event-detail_card_front {
-  background-color: #FFFFFF;
   backface-visibility: hidden;
   position: relative;
   top: 0;
@@ -126,7 +130,6 @@ a:link {
 }
 
 .event-detail_card_back  {
-  background-color: #FFFFFF;
   backface-visibility: hidden;
   position: absolute;
   top: 0;

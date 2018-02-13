@@ -20,9 +20,9 @@ export default class Map extends Component {
  
   render() {
     const {latitude, longitude} = this.props;
-    const place = [<PlaceMarker lat={latitude} lng={longitude} />]
+    const place = [<PlaceMarker key = {latitude} lat={latitude} lng={longitude} />]
     return(
-      <div style={{ height: `200px`}}>
+      <div style={{ height: `150px`}}>
         <ViewMap
           center={{
             lat: Number(latitude),

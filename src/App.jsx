@@ -13,21 +13,23 @@ export class App extends Component{
     this.props.fetchEvents(this.props.data.city);
   }
 
-  componentWillReceiveProps(){
-    this.setState({eventsLoaded: true})
+  componentWillReceiveProps(nextProps) {
+    this.setState({eventsLoaded:true})
   }
 
   render(){
     let { events } = this.props.data;
+    console.log(this.props.data)
     return(
       <div className = 'website-container'>
         <Header />
-        {this.state.eventsLoaded ? <EventList events={events} /> : null}
+        <EventList events={events} />
       </div>
-
     )
   }
 }
+
+
   function mapStateToProps(state){
     const { data } = state;
       return { data };
