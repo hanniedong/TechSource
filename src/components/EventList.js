@@ -9,8 +9,7 @@ export default class EventList extends Component{
 
   renderEvents(){
     const { events } = this.props;
-    console.log(events)
-
+    
     if (events){
     return events.map((event)=> {
       if(event.logo){
