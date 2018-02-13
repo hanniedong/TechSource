@@ -24,7 +24,7 @@ export class App extends Component{
         <div className = 'jumbotron'>
           <Header />
         </div>
-        <EventList events={events}/>
+        {this.state.eventsLoaded ? <EventList events={events} /> : null}
       </div>
 
     )

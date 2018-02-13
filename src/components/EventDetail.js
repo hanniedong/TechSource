@@ -14,9 +14,9 @@ export default class EventDetail extends Component{
   
 
   render(){
-    const { image, name, url, location, date, start, end, latitude, longitude } = this.props
+    const { address, image, name, url, location, date, start, end, latitude, longitude } = this.props
     const displayDate = new Date(date).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' });
-
+    console.log(address)
     const startDisplayTime = new Date(start).toLocaleTimeString('en-US');
 
     const endDisplayTime = new Date(end).toLocaleTimeString('en-US');
@@ -36,9 +36,10 @@ export default class EventDetail extends Component{
           <div className="event-detail_card_back">
             <div className="event-detail_detail">
               <Map 
-                latitude = {this.props.latitude}
-                longitude = {this.props.longitude}
+                latitude = {latitude}
+                longitude = {longitude} 
               />
+              <p> Address: {address.address_1} {address.region}, {address.postal_code}</p>
               <p >Start Time: {startDisplayTime}</p> 
               <p >End Time: {endDisplayTime}</p> 
               <p onClick={this.handleClick.bind(this)}>Back</p>

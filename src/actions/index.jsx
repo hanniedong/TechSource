@@ -27,13 +27,15 @@ export const fetchEvents = (city) => {
       token: TOKEN,
       categories: '102',
       'location.address': city,
-      'location.within': '15mi'
+      'location.within': '25mi',
+      'sort_by': 'date',
+      'q': 'hackathon'
     }
   })
   .then(response => {
     const {events} = response.data;
     events.forEach(event => {
-      let {venue_id} = event;
+      const {venue_id} = event;
       axios.get(`https://www.eventbriteapi.com/v3/venues/${venue_id}/`, {
         params: {
           token: PERSONAL_TOKEN
@@ -42,6 +44,7 @@ export const fetchEvents = (city) => {
       .then(response => {
         event.latitude = response.data.latitude;
         event.longitude = response.data.longitude;
+        event.address = response.data.address;
         eventArray.push(event)
       })
       .then(() => {

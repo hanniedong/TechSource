@@ -23,6 +23,7 @@ export default class EventList extends Component{
             longitude={event.longitude}
             start = {event.start.local}
             end = {event.end.local}
+            address = {event.address}
             
             
             date={event.start.local}
