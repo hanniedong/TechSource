@@ -9,8 +9,7 @@ export default class EventList extends Component{
 
   renderEvents(){
     const { events } = this.props;
-    console.log(events)
-
+    
     if (events){
     return events.map((event)=> {
       if(event.logo){
@@ -23,6 +22,8 @@ export default class EventList extends Component{
             latitude={event.latitude}
             longitude={event.longitude}
             start = {event.start.local}
+            end = {event.end.local}
+            address = {event.address}
             
             
             date={event.start.local}

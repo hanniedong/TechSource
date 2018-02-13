@@ -18,15 +18,19 @@ export class SearchBar extends Component {
 
   render(){
     return(
-      <div> 
+      <div > 
         <form onSubmit = {this.handleSubmit.bind(this)}>
           <input
+            className = "form-control"
             name = "city"
             type = "search"
             placeholder = "Search by City"
             onChange = {this.handleInputChange.bind(this)}
           />
-          <button type= "submit"> Submit </button>
+          <button 
+            className = "btn" 
+            type= "submit"> Submit
+          </button>
         </form>
       </div>
       )
