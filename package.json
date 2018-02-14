@@ -1,12 +1,11 @@
 {
   "name": "hackathonfinder",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
     "postinstall": "webpack -p",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -19,6 +18,7 @@
     "chai-jquery": "^2.0.0",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
+    "express": "^4.13.3",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
     "express": "^4.13.3",
