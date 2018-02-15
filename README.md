@@ -1,25 +1,39 @@
-# ReduxSimpleStarter
+# TechSource
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+## Table of contents
 
-### Getting Started
+-----------------------------------------------
 
-There are two methods for getting started with this repo.
+* [Description](#description)
+* [User Stories](#userstories)
+* [Tech Stack](#techstack)
+* [Screenshots](#screenshots)
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+<a name="description" />
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+### Description: 
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+-----------------------------------------------
 
-```
-> npm install
-> npm start
-```
+
+<a name="techstack" />
+
+### Tech Stack: 
+
+-----------------------------------------------
+
+- Ruby on Rails
+- PostgreSQL
+- React 
+- Bootstrap 
+- Amazon S3
+- Google Maps API 
+
+<a name="screenshots" />
+
+### SCREENSHOTS: 
+-----------------------------------------------
+
+#### Resources:
+* [React-Google-Maps](https://github.com/tomchentw/react-google-maps)
+
