@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Header from './components/Header.js';
+import Header from './components/Header';
 import { updateSearch, fetchEvents } from './actions';
-import EventList from './components/Eventlist.js';
+import EventList from './components/EventList';
 
 export class App extends Component{
   state = {
