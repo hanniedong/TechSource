@@ -27,9 +27,9 @@ export const fetchEvents = (city) => {
       token: TOKEN,
       categories: '102',
       'location.address': city,
-      'location.within': '25mi',
+      'location.within': '1mi',
       'sort_by': 'date',
-      'q': 'hackathon'
+      'q': 'tech'
     }
   })
   .then(response => {
