@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map';
+import Map from './map';
 export default class EventDetail extends Component{
   constructor(props){
     super(props)
@@ -17,9 +17,9 @@ export default class EventDetail extends Component{
     const { id, address, image, name, url, location, date, start, end, latitude, longitude } = this.props
     const displayDate = new Date(date).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' });
     const startDisplayTime = new Date(start).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric'});
-
     const endDisplayTime = new Date(end).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric'});
-
+    const fullAddress = `${address.address_1} ${address.region}, ${address.postal_code}`
+    const link = `https://maps.google.com/?q=${fullAddress}`
     return(
       <div className = {`event-detail_container flip-container ${this.state.flipped ? 'flip-container-flip' : ''}`}>
         <div className = 'event-detail_card flipper'>
@@ -42,7 +42,7 @@ export default class EventDetail extends Component{
             />
              <br></br>
             <div className="event-detail_detail">
-              <p className = "event-detail_detail_font"> {address.address_1} {address.region}, {address.postal_code}</p>
+              <a className = "event-detail_detail_font" href= {link}> {fullAddress}</a>
               <p className = "event-detail_detail_font" >Start Time: {startDisplayTime} | End Time: {endDisplayTime}</p> 
             </div>
              <div className = 'event-detail_link'>
