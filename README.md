@@ -21,12 +21,9 @@
 ### Tech Stack: 
 
 -----------------------------------------------
-
-- Ruby on Rails
-- PostgreSQL
 - React 
+- Redux
 - Bootstrap 
-- Amazon S3
 - Google Maps API 
 
 <a name="screenshots" />
