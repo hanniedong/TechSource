@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withGoogleMap, GoogleMap } from 'react-google-maps'
- import { PlaceMarker } from './placeMarker'
+ import { PlaceMarker } from './PlaceMarker'
 
 const ViewMap = withGoogleMap(props => (
   <GoogleMap
