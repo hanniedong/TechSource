@@ -1,22 +1,10 @@
 # TechSource
 
-## Table of contents
-
------------------------------------------------
-
-* [Description](#description)
-* [User Stories](#userstories)
-* [Tech Stack](#techstack)
-* [Screenshots](#screenshots)
-
-<a name="description" />
-
 ### Description: 
 
 -----------------------------------------------
 
 
-<a name="techstack" />
 
 ### Tech Stack: 
 
@@ -26,7 +14,6 @@
 - Bootstrap 
 - Google Maps API 
 
-<a name="screenshots" />
 
 ### SCREENSHOTS: 
 -----------------------------------------------
