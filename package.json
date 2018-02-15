@@ -8,11 +8,10 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p",
+    "postinstall": "node_modules/.bin/webpack",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "engines" : { "node" : "6.11.2" },
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -37,8 +36,10 @@
     "react": "^15.6.2",
     "react-dom": "^15.0.0",
     "react-google-maps": "^9.4.5",
+    "react-places-autocomplete": "^6.1.2",
     "react-redux": "^4.3.0",
     "react-router": "^2.0.1",
+    "react-spinners": "^0.2.6",
     "redux": "^3.0.4",
     "redux-thunk": "^2.2.0"
   }

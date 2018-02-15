@@ -51,7 +51,6 @@ export const fetchEvents = (city) => {
         setTimeout(() => updateEvents(dispatch, eventArray),0)
       })
       .catch(function (error) {
-        console.log("error")
         console.log(error);
       });
     })   

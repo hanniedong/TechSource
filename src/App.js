@@ -3,10 +3,15 @@ import { connect } from 'react-redux';
 import Header from './components/Header';
 import { updateSearch, fetchEvents } from './actions';
 import EventList from './components/EventList';
+import { RingLoader } from 'react-spinners';
 
 export class App extends Component{
-  state = {
-    eventsLoaded: false
+
+  constructor(props){
+    super(props)
+    this.state = {
+      loaded: false
+    }
   }
 
   componentWillMount(){
@@ -14,8 +19,11 @@ export class App extends Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({eventsLoaded:true})
+    if (nextProps.loaded !== this.state.loaded) {
+      this.setState({ loaded: true });
+    }
   }
+
 
   render(){
     let { events } = this.props.data;
@@ -23,7 +31,7 @@ export class App extends Component{
     return(
       <div className = 'website-container'>
         <Header />
-        <EventList events={events} />
+        {this.state.loaded ? <EventList events={events} /> : null}
       </div>
     )
   }
