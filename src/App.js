@@ -11,7 +11,7 @@ export class App extends Component{
     super(props)
     this.state = {
       loaded: false
-    }
+    } 
   }
 
   componentWillMount(){
