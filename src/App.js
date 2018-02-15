@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Header from './components/header';
+import Header from './components/Header';
 import { updateSearch, fetchEvents } from './actions';
-import EventList from './components/eventList';
-import { RingLoader } from 'react-spinners';
+import EventList from './components/EventList';
 
 export class App extends Component{
 

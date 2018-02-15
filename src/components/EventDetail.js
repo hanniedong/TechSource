@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './map';
+import Map from './Map';
 export default class EventDetail extends Component{
   constructor(props){
     super(props)
