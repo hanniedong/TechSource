@@ -29,7 +29,8 @@ export const fetchEvents = (city) => {
       'location.address': city,
       'location.within': '1mi',
       'sort_by': 'date',
-      'q': 'tech'
+      'q': 'tech',
+      'start_date.keyword': 'this_month'
     }
   })
   .then(response => {
