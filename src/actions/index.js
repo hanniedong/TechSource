@@ -20,7 +20,6 @@ export const updateCity = (text) => {
 
 export const fetchEvents = (city) => {
   var eventArray = [];
-  console.log(city)
   return (dispatch) => {
   axios.get('https://www.eventbriteapi.com/v3/events/search/', {
     params: {
