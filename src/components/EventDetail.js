@@ -40,6 +40,7 @@ export default class EventDetail extends Component{
               latitude = {latitude}
               longitude = {longitude} 
             />
+             <br></br>
             <div className="event-detail_detail">
               <p className = "event-detail_detail_font"> {address.address_1} {address.region}, {address.postal_code}</p>
               <p className = "event-detail_detail_font" >Start Time: {startDisplayTime} | End Time: {endDisplayTime}</p> 
