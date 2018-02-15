@@ -166,7 +166,7 @@ a:link {
 }
 
 .map {
-  height: 25vh; 
+  height: 30vh; 
   width: 100%; 
   display: flex;
   padding: 0
@@ -174,10 +174,10 @@ a:link {
 
 @media only screen 
 and (min-width : 500px) and (max-width : 980px) {
- .event-detail_card {width: 90%;}
+ .event-detail_card {width: 80%;}
 }
 
 @media only screen 
 and (min-width : 0px) and (max-width : 500px) {
- .event-detail_link {display:none;}
+ .map {display:none;}
 }
