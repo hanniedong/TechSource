@@ -16,9 +16,9 @@ export default class EventDetail extends Component{
   render(){
     const { id, address, image, name, url, location, date, start, end, latitude, longitude } = this.props
     const displayDate = new Date(date).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' });
-    const startDisplayTime = new Date(start).toLocaleTimeString('en-US');
+    const startDisplayTime = new Date(start).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric'});
 
-    const endDisplayTime = new Date(end).toLocaleTimeString('en-US');
+    const endDisplayTime = new Date(end).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric'});
 
     return(
       <div className = {`event-detail_container flip-container ${this.state.flipped ? 'flip-container-flip' : ''}`}>
@@ -41,9 +41,8 @@ export default class EventDetail extends Component{
             />
             <br></br>
             <div className="event-detail_detail">
-              <p> Address: {address.address_1} {address.region}, {address.postal_code}</p>
-              <p>Start Time: {startDisplayTime}</p> 
-              <p>End Time: {endDisplayTime}</p> 
+              <p className = "event-detail_detail_font"> {address.address_1} {address.region}, {address.postal_code}</p>
+              <p className = "event-detail_detail_font" >Start Time: {startDisplayTime} | End Time: {endDisplayTime}</p> 
             </div>
              <div className = 'event-detail_link'>
               <p className = 'event-detail_link_font' onClick={this.handleClick.bind(this)}>Back</p>

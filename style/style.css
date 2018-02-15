@@ -38,6 +38,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-height: 100%;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -68,10 +69,6 @@
   size: 15px;
 }
 
-p{
-  padding: 0;
-  margin-top: -20px;
-}
 a:link {
   color: #4D4D4D;
   text-decoration: none;
@@ -143,6 +140,7 @@ a:link {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-height: 100%;
 }
 
 /* front pane, placed above back */
