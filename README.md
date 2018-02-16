@@ -12,6 +12,7 @@ Attending technology events and conferences is very important for networking, kn
 - Redux
 - Bootstrap 
 - Google Maps API 
+- Eventbrite API
 
 
 ### Stretch Goals
